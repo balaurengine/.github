@@ -31,44 +31,6 @@ Written in Rust. One file to ship.
 - **Platforms** — Windows, macOS, Linux; iOS, Android and web cross-compiled in CI on every push.
 - **Export** — one self-contained binary per target: bytecode, scenes and assets fused onto the runtime.
 
-## Quickstart
-
-```bash
-cargo run -p balaur_cli -- new my-game
-cargo run -p balaur_cli -- run my-game                        # dev mode, hot reload on
-cargo run -p balaur_cli --features window -- edit my-game     # open in the editor
-cargo build --release -p balaur_cli                           # the runtime a game ships on
-cargo run -p balaur_cli -- export my-game --template target/release/balaur
-```
-
-Hot reload: run `cargo run -p balaur_cli -- run examples/hello --headless` and edit
-`examples/hello/scripts/spinner.rn` while it goes.
-
-## A scene and a script
-
-```toml
-# scenes/main.toml
-[[nodes]]
-name = "Ball"
-position = [0.0, 6.0, 0.0]
-script = { source = "scripts/ball.rn", props = { speed = 3.5 } }
-body3d = "dynamic"                                # from balaur_physics
-collider3d = { kind = "ball", radius = 0.5 }      # from balaur_physics
-shape3d = { kind = "ball", radius = 0.5 }         # from balaur_render
-```
-
-```rust
-// scripts/ball.rn
-pub fn exports() { #{ speed: 2.0 } }              // what the inspector may tune
-
-pub fn init(this) { this.angle = 0.0; }
-
-pub fn update(this, dt) {                         // per frame; fixed_update is per 60 Hz tick
-    this.angle += dt * this.speed;
-    this.node.set_rotation_euler(0.0, this.angle, 0.0);
-}
-```
-
 ## Documentation
 
 At [balaurengine.org](https://balaurengine.org):
