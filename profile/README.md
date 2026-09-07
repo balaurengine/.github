@@ -10,7 +10,7 @@
 
 **A 2D &amp; 3D node-based game engine, fully deterministic, with scripts that reload in milliseconds.**
 
-Written in Rust. One file to ship.
+Written in Rust.
 
 [**Docs**](https://balaurengine.org/docs/intro) · [Features](https://balaurengine.org/features) · [Principles](https://balaurengine.org/docs/principles) · [Download](https://balaurengine.org/download) · [Roadmap](https://balaurengine.org/docs/roadmap) · [Discord](https://discord.gg/v649emcpAu)
 
