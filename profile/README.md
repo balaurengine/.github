@@ -1,8 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">
-  <img src="https://raw.githubusercontent.com/balaurengine/balaur/refs/heads/main/docs/assets/logo-light.svg" alt="" width="84" height="84">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/balaurengine/balaur/main/docs/assets/logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/balaurengine/balaur/main/docs/assets/logo-light.svg">
+  <img src="https://raw.githubusercontent.com/balaurengine/balaur/main/docs/assets/logo-light.svg" alt="Balaur" width="84" height="84">
 </picture>
 
 # Balaur
